@@ -1,3 +1,4 @@
+import java.util.function.BooleanSupplier;
 
 public class Token {
 
@@ -37,6 +38,13 @@ public class Token {
 		return (token.getPosition() == 100) ? Boolean.TRUE : Boolean.FALSE;
 	}
 
+	public boolean calculateSpacesMoved(int initialTokenPosition, int actualTokenPosition) {
+		if((actualTokenPosition -= initialTokenPosition) == 4) {
+			return Boolean.TRUE;
+		}
+		return Boolean.FALSE;
+	}
 
+	
 
 }

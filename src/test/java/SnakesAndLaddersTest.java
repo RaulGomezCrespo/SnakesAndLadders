@@ -48,4 +48,17 @@ public class SnakesAndLaddersTest {
 		assertFalse(token.calculateVictory(token));
 	}
 	
+	@Test
+	public void isTokenPositionMoved4SpacesIfResultOfRollDiceAre4() {
+		Token token = new Token(1);
+		int resultOfRollDice = 4;
+		int initialTokenPosition = token.getPosition();
+		if(resultOfRollDice == 4) {
+			token = token.movePosition4Spaces(token);
+		}
+		assertTrue(token.calculateSpacesMoved(initialTokenPosition, token.getPosition()));
+		
+		
+	}
+	
 }
