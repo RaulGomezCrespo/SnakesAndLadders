@@ -1,4 +1,3 @@
-import java.util.function.BooleanSupplier;
 
 public class Token {
 
@@ -16,15 +15,8 @@ public class Token {
 		this.position = position;
 	}
 	
-	public Token movePosition3Spaces(Token token) {
-		int moveToken = 3;
-		int actualTokenPosition = token.getPosition();
-		token.setPosition(actualTokenPosition += moveToken);
-		return token;
-	}
-	
-	public Token movePosition4Spaces(Token token) {
-		int moveToken = 4;
+	public Token moveTokenPositionByResultOfDice(Token token, int resultOfDice) {
+		int moveToken = resultOfDice;
 		int actualTokenPosition = token.getPosition();
 		actualTokenPosition += moveToken;
 		if(actualTokenPosition <= 100) {

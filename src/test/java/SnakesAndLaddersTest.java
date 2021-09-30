@@ -15,7 +15,7 @@ public class SnakesAndLaddersTest {
 	public void isTokenOnSquare4IfMoves3SpacesWhenTokenIsOnSquare1() {
 		
 		Token token = new Token(1);
-		token = token.movePosition3Spaces(token);
+		token = token.moveTokenPositionByResultOfDice(token, 3);
 		
 		assertEquals(4, token.getPosition());
 	}
@@ -24,8 +24,8 @@ public class SnakesAndLaddersTest {
 	public void isTokenOnSquare8IfMoves4SpacesWhenTokenIsOnSquare4AfterMoved3Spaces() {
 		
 		Token token = new Token(1);
-		token = token.movePosition3Spaces(token);
-		token = token.movePosition4Spaces(token);
+		token = token.moveTokenPositionByResultOfDice(token, 3);
+		token = token.moveTokenPositionByResultOfDice(token, 4);
 		
 		assertEquals(8, token.getPosition());
 	}
@@ -34,7 +34,7 @@ public class SnakesAndLaddersTest {
 	public void isGameWonIfMoves3SpacesWhenTokenIsOnSquare97() {
 		
 		Token token = new Token(97);
-		token = token.movePosition3Spaces(token);
+		token = token.moveTokenPositionByResultOfDice(token, 3);
 		
 		assertTrue(token.calculateVictory(token));
 	}
@@ -43,7 +43,7 @@ public class SnakesAndLaddersTest {
 	public void isGameLostIfMoves4SpacesWhenTokenIsOnSquare97() {
 		
 		Token token = new Token(97);
-		token = token.movePosition4Spaces(token);
+		token = token.moveTokenPositionByResultOfDice(token, 4);
 		
 		assertFalse(token.calculateVictory(token));
 	}
@@ -53,9 +53,7 @@ public class SnakesAndLaddersTest {
 		Token token = new Token(1);
 		int resultOfRollDice = 4;
 		int initialTokenPosition = token.getPosition();
-		if(resultOfRollDice == 4) {
-			token = token.movePosition4Spaces(token);
-		}
+		 token  = token.moveTokenPositionByResultOfDice(token, resultOfRollDice);
 		assertTrue(token.calculateSpacesMoved(initialTokenPosition, token.getPosition()));
 		
 		
