@@ -47,4 +47,5 @@ public class SnakesAndLaddersTest {
 		
 		assertFalse(token.calculateVictory(token));
 	}
+	
 }
