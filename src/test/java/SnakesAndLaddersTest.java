@@ -30,4 +30,13 @@ public class SnakesAndLaddersTest {
 		assertEquals(8, token.getPosition());
 	}
 	
+	@Test
+	public void isGameWonIfMoves3SpacesWhenTokenIsOnSquare97() {
+		
+		Token token = new Token(97);
+		token = token.movePosition3Spaces(token);
+		
+		assertTrue(token.calculateVictory(token));
+	}
+	
 }

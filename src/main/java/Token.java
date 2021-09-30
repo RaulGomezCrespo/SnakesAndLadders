@@ -29,6 +29,12 @@ public class Token {
 		return token;
 	}
 
+	public boolean calculateVictory(Token token) {
+		
+		
+		return (token.getPosition() == 100) ? Boolean.TRUE : Boolean.FALSE;
+	}
+
 
 
 }
