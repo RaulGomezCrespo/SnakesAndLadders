@@ -11,4 +11,17 @@ public class Token {
 		return position;
 	}
 
+	private void setPosition(int position) {
+		this.position = position;
+	}
+	
+	public Token movePosition3Spaces(Token token) {
+		int moveToken = 3;
+		int actualTokenPosition = token.getPosition();
+		token.setPosition(actualTokenPosition += moveToken);
+		return token;
+	}
+
+
+
 }
