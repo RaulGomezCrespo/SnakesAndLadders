@@ -20,4 +20,14 @@ public class SnakesAndLaddersTest {
 		assertEquals(4, token.getPosition());
 	}
 
+	@Test
+	public void isTokenOnSquare8IfMoves4SpacesWhenTokenIsOnSquare4AfterMoved3Spaces() {
+		
+		Token token = new Token(1);
+		token = token.movePosition3Spaces(token);
+		token = token.movePosition4Spaces(token);
+		
+		assertEquals(8, token.getPosition());
+	}
+	
 }

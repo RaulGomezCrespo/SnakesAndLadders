@@ -21,6 +21,13 @@ public class Token {
 		token.setPosition(actualTokenPosition += moveToken);
 		return token;
 	}
+	
+	public Token movePosition4Spaces(Token token) {
+		int moveToken = 4;
+		int actualTokenPosition = token.getPosition();
+		token.setPosition(actualTokenPosition += moveToken);
+		return token;
+	}
 
 
 
