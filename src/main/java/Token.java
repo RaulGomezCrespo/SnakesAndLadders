@@ -25,12 +25,14 @@ public class Token {
 	public Token movePosition4Spaces(Token token) {
 		int moveToken = 4;
 		int actualTokenPosition = token.getPosition();
-		token.setPosition(actualTokenPosition += moveToken);
+		actualTokenPosition += moveToken;
+		if(actualTokenPosition <= 100) {
+			token.setPosition(actualTokenPosition);
+		}
 		return token;
 	}
 
 	public boolean calculateVictory(Token token) {
-		
 		
 		return (token.getPosition() == 100) ? Boolean.TRUE : Boolean.FALSE;
 	}

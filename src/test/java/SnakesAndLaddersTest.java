@@ -39,4 +39,12 @@ public class SnakesAndLaddersTest {
 		assertTrue(token.calculateVictory(token));
 	}
 	
+	@Test
+	public void isGameLostIfMoves4SpacesWhenTokenIsOnSquare97() {
+		
+		Token token = new Token(97);
+		token = token.movePosition4Spaces(token);
+		
+		assertFalse(token.calculateVictory(token));
+	}
 }
