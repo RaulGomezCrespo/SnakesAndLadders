@@ -8,7 +8,7 @@ public class DiceTest {
 	public void isResultOfDiceBetween1And6Inclusive() {
 		Dice dice = new Dice();
 		int resultOfRollDice = dice.roll();
-		assertTrue((resultOfRollDice >= 1 && resultOfRollDice <= 6)? Boolean.TRUE: Boolean.FALSE);
+		assertTrue((resultOfRollDice >= 1 && resultOfRollDice <= 6) ? Boolean.TRUE : Boolean.FALSE);
 	}
-	
+
 }

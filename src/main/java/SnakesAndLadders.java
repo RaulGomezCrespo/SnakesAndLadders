@@ -11,26 +11,26 @@ public class SnakesAndLadders {
 		System.out.println("Hello Voxel");
 		System.out.println("Do you want start new game?");
 		System.out.println("Write Y/N and press enter: ");
-		String answer = ""; 
+		String answer = "";
 		boolean isGameStart = Boolean.FALSE;
 		do {
 			Scanner sc = new Scanner(System.in);
 			answer = sc.nextLine();
-			if(answer.equalsIgnoreCase("y")) {
+			if (answer.equalsIgnoreCase("y")) {
 				System.out.println("Game start in first square of the board.");
 				isGameStart = Boolean.TRUE;
-			} else if(answer.equalsIgnoreCase("n")) {
+			} else if (answer.equalsIgnoreCase("n")) {
 				System.out.println("See you later");
 			} else {
 				System.out.println("Please, write the correct character");
 			}
-		} while(!answer.equalsIgnoreCase("y") && !answer.equalsIgnoreCase("n"));
-		
-		if(isGameStart) {
+		} while (!answer.equalsIgnoreCase("y") && !answer.equalsIgnoreCase("n"));
+
+		if (isGameStart) {
 			gamePlay();
 		}
 	}
-	
+
 	@SuppressWarnings("resource")
 	public static void gamePlay() {
 		Token token = new Token(1);
@@ -42,7 +42,7 @@ public class SnakesAndLadders {
 			int resultOfDice = dice.roll();
 			token = token.moveTokenPositionByResultOfDice(token, resultOfDice);
 			System.out.println("Your token is in the square: " + token.getPosition());
-		} while(!token.calculateVictory(token));
+		} while (!token.calculateVictory(token));
 		System.out.println("Congratulations you win the game!");
 	}
 }
