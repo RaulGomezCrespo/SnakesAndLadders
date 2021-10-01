@@ -42,7 +42,7 @@ public class SnakesAndLadders {
 			int resultOfDice = dice.roll();
 			token = token.moveTokenPositionByResultOfDice(token, resultOfDice);
 			System.out.println("Your token is in the square: " + token.getPosition());
-		} while(token.getPosition() != 100);
+		} while(!token.calculateVictory(token));
 		System.out.println("Congratulations you win the game!");
 	}
 }
