@@ -56,7 +56,6 @@ public class SnakesAndLaddersTest {
 		 token  = token.moveTokenPositionByResultOfDice(token, resultOfRollDice);
 		assertTrue(token.calculateSpacesMoved(initialTokenPosition, token.getPosition()));
 		
-		
 	}
 	
 }
