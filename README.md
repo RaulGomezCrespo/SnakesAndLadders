@@ -1,36 +1,28 @@
-# Java JUnit5
+# SnakesAndLadders
 
-A minimal setup with Java, [JUnit5](https://junit.org/junit5/), [AssertJ](https://assertj.github.io/doc/) and [Mockito](https://site.mockito.org/) to get you started.
-
-You can use [gradle](https://gradle.org/) or [maven](https://maven.apache.org/)
-
-[More complicated JUnit5 setups](https://github.com/junit-team/junit5-samples)
+A solution to the problem "SnakesAndLadders" for the Voxel recruiting process. It consists on a Java 1.8 console application, with uses Gradle 6.9.1 for building and JUnit 5 for testing.
 
 ## Setup
 
-    git clone https://github.com/swkBerlin/kata-bootstraps
-    cd java/junit5
+    git clone https://github.com/RaulGomezCrespo/SnakesAndLadders.git
 
-Open as preexisting project in your favorite IDE and choose between gradle or maven nature
+## Requirements
 
-## (optional) IDE Setup
+	- Java 1.8
+	- Gradle 6.9.1	
 
-Run `./gradlew idea` to build [idea](https://www.jetbrains.com/idea) project.
+## Running
+
+Run the 'SnakesAndLadders' class for start application.
 
 ## Running Tests
 
-To execute the tests either run `./gradlew test`, `mvn test` or run the tests from the IDE you are using
+Run the tests from the IDE you are using.
+This application has 2 test classes:
+- DiceTest
+- SnakesAndLaddersTest
 
-## Test Libraries Available from the Get-Go
-- [JUnit 5.7.2](https://junit.org/junit5/docs/snapshot/release-notes/#release-notes-5.7.2)
-- [AssertJ 3.19.0](https://assertj.github.io/doc/#assertj-core-3-19-0-release-notes)
-- [Mockito 3.10.0](https://github.com/mockito/mockito/releases)
+## Architecture
 
+The main entry point of the application is the 'SnakesAndLadders' class.
 
-## Additional Libraries
-- [Vavr](https://www.vavr.io/) a functional library for Java.
-
-
-This repo was tested with [idea](https://www.jetbrains.com/idea) [2020.3.1](https://confluence.jetbrains.com/display/IDEADEV/IntelliJ+IDEA+2020.3.1+%28203.6682.168+build%29+Release+Notes), if you encounter problems please open an issue or send a pull request.
-
-Have fun!
